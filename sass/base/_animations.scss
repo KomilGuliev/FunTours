@@ -1,0 +1,23 @@
+@keyframes rotateBlock {
+	0% {
+		transform: rotate(0);
+	}
+
+	20% {
+		transform: rotate(0);
+	}
+	40% {
+		transform: rotate((180deg))
+	}
+
+	60% {
+		transform: rotate(180deg);
+	}
+
+	80% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

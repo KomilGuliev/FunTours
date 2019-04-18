@@ -1,0 +1,20 @@
+.section-about {
+	width: 100%;
+	padding: 3rem;
+	background-color:rgb(238, 238, 238);
+	box-sizing: border-box;
+
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.popular-tours {
+	width: 100%;
+	padding: 7rem 4rem;
+	box-sizing: border-box;
+}
+
+.tours__content {
+	display: flex;
+	justify-content: space-around;
+}

@@ -1,0 +1,8 @@
+.m-bottom-small { margin-right: 2rem; };
+.m-bottom-medium { margin-right: 4rem; };
+.m-bottom-large { margin-right: 8rem; };
+
+.p-bottom-small { padding-bottom: 2rem; }
+
+
+.center { @include center; }

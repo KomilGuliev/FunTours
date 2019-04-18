@@ -1,0 +1,249 @@
+/**COLORS**/
+@font-face {
+  font-family: Merienda;
+  src: url(../font/Merienda-Bold.ttf); }
+
+@font-face {
+  font-family: Permanent;
+  src: url(../font/PremanentMarker.ttf); }
+
+@font-face {
+  font-family: Libre;
+  src: url(../font/LibreBaskerville-Bold.ttf); }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 10px; }
+
+body {
+  box-sizing: border-box;
+  padding: 2rem; }
+
+.m-bottom-small {
+  margin-right: 2rem; }
+
+.m-bottom-medium {
+  margin-right: 4rem; }
+
+.m-bottom-large {
+  margin-right: 8rem; }
+
+.p-bottom-small {
+  padding-bottom: 2rem; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+@keyframes rotateBlock {
+  0% {
+    transform: rotate(0); }
+  20% {
+    transform: rotate(0); }
+  40% {
+    transform: rotate(180deg); }
+  60% {
+    transform: rotate(180deg); }
+  80% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.header {
+  width: 100%;
+  height: 650px;
+  background-image: linear-gradient(to right, rgba(31, 28, 44, 0.6), rgba(146, 141, 171, 0.6)), url(../img/background-2.jpg);
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+  padding-top: 40rem;
+  box-sizing: border-box; }
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: Merienda;
+  text-align: center;
+  display: inline-block;
+  padding: .6rem 2.4rem;
+  border-radius: 40px;
+  text-transform: uppercase;
+  color: white;
+  transition: all .4s;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 100;
+  cursor: pointer; }
+
+.btn::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+  transition: all .4s ease-out; }
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7); }
+  .btn:hover::before {
+    transform: scaleX(1.5) scale(1.3);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.7); }
+
+.btn:active, .btn:focus {
+  outline: none; }
+
+.btn--darkblue {
+  background-image: linear-gradient(to right, rgba(81, 74, 157, 0.7), rgba(192, 72, 72, 0.7)); }
+  .btn--darkblue::before {
+    background-image: linear-gradient(to right, rgba(72, 0, 72, 0.1), rgba(36, 198, 220, 0.1)); }
+
+.btn--cold {
+  background-image: radial-gradient(#b9fcf3, #514a9d); }
+  .btn--cold::before {
+    background-image: radial-gradient(rgba(185, 252, 243, 0.1), rgba(81, 74, 157, 0.1)); }
+
+.btn--hot {
+  background-image: radial-gradient(#def86b, #c04848); }
+  .btn--hot::before {
+    background-image: radial-gradient(rgba(222, 248, 107, 0.1), rgba(192, 72, 72, 0.1)); }
+
+.btn--green {
+  background-image: radial-gradient(#acbb78, #799f0c); }
+  .btn--green::before {
+    background-image: radial-gradient(rgba(172, 187, 120, 0.15), rgba(121, 159, 12, 0.15)); }
+
+.about__content {
+  display: flex;
+  min-height: 600px; }
+
+.about__img-block, .about__topic {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box; }
+
+.about__img-block {
+  padding-left: 12rem;
+  position: relative;
+  animation: rotateBlock 5s ease-in-out infinite;
+  animation-fill-mode: forwards; }
+  .about__img-block:hover {
+    animation-play-state: paused; }
+
+.about__img {
+  width: 80%;
+  height: 80%;
+  transition: all .5s;
+  border: 1px solid red; }
+  .about__img--1 {
+    clip-path: polygon(20% 30%, 70% 10%, 100% 70%, 10% 100%);
+    -webkit-clip-path: polygon(20% 30%, 70% 10%, 100% 70%, 10% 100%); }
+  .about__img--2 {
+    transform: rotate(-2deg) translateY(-3rem);
+    clip-path: polygon(80% 70%, 30% 90%, 0 30%, 90% 0);
+    -webkit-clip-path: polygon(80% 70%, 30% 90%, 0 30%, 90% 0); }
+  .about__img--1:hover {
+    transform: translate(-8rem, 6rem); }
+  .about__img--2:hover {
+    transform: translate(9rem, -9rem) rotate(-2deg); }
+
+.about__topic {
+  padding-top: 5rem;
+  font-size: 2.2rem; }
+
+.about__title {
+  font-size: 6rem;
+  font-family: Permanent;
+  letter-spacing: 2px;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  text-transform: capitalize; }
+
+.about__text {
+  margin-bottom: 3rem;
+  padding-right: 3rem;
+  color: rgba(0, 0, 0, 0.7); }
+
+.card {
+  width: 320px;
+  min-height: 400px;
+  box-sizing: border-box;
+  padding: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  position: relative; }
+  .card img {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  .card__info {
+    width: 100%;
+    height: 50%; }
+  .card__price {
+    font-size: 3rem;
+    color: #ff4640;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-left: 1.3rem; }
+  .card__duration {
+    color: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    margin-left: 10rem; }
+  .card__title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-family: Merienda;
+    padding-left: 1.3rem;
+    text-indent: -1.3rem; }
+  .card__overflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .8s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .card__overflow--cold {
+      background-image: linear-gradient(-45deg, #514a9d 30%, #24c6dc 60%, transparent); }
+    .card__overflow--hot {
+      background-image: linear-gradient(-45deg, #ff512f 30%, #f09819 60%, transparent); }
+    .card__overflow--green {
+      background-image: linear-gradient(-45deg, #799f0c 30%, #acbb78 60%, transparent); }
+  .card:hover .card__overflow {
+    visibility: visible;
+    opacity: 1; }
+
+.section-about {
+  width: 100%;
+  padding: 3rem;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+
+.popular-tours {
+  width: 100%;
+  padding: 7rem 4rem;
+  box-sizing: border-box; }
+
+.tours__content {
+  display: flex;
+  justify-content: space-around; }
