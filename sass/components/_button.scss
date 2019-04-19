@@ -3,7 +3,7 @@
 	&:link,
 	&:visited {
 		text-decoration: none;
-		font-size: 3rem;
+		font-size: 2.4rem;
 		font-family: Merienda;
 		text-align: center;
 		display: inline-block;
@@ -89,6 +89,25 @@
 		&::before {
 			background-image: radial-gradient(rgba($color-green-light, 0.15), rgba($color-green-dark, .15));
 		}
+	}
+
+	&--arrow {
+		clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 10% 50%);
+		-webkit-clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 10% 50%);
+		
+		background: #aa4b6b; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		padding-left: 3rem;
+
+	}
+
+	&--next {
+		font-family: Permanent sans-serif;
+		background: #d3cce3; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #d3cce3, #e9e4f0); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #d3cce3, #e9e4f0); 
 	}
 
 }

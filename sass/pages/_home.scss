@@ -10,11 +10,50 @@
 
 .popular-tours {
 	width: 100%;
-	padding: 7rem 4rem;
+	padding: 7rem 4rem 0;
 	box-sizing: border-box;
+	text-align: center;
 }
 
 .tours__content {
 	display: flex;
 	justify-content: space-around;
+	margin-bottom: 8rem;
+}
+
+.section-make-happy {
+	padding: 12rem;
+	background-color: #eee;
+	min-height: 500px;
+	margin-top: 7rem;
+
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: space-between; 
+
+	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+	-webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+}
+
+.booking {
+	width: 100%;
+	height: 700px;
+	box-sizing: border-box;
+	margin-top: -15rem;
+	padding: 25rem;
+	color: #fff;
+	font-size: 2rem;
+	background-image: linear-gradient(
+		to left,
+		rgba($color-bg-steelGray-1, .6),
+		rgba($color-bg-steelGray-2, .6)
+	),
+	url(../img/form.jpg);
+}
+
+
+.box > p {
+	text-indent: 1rem;
+	font-family: Merienda;
+	padding: 1rem;
 }
